@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .login{
+            background-color: aliceblue;
+            border: 2px solid;
+            text-align: center;
+            width: 500px;
+            height: 200px;
+            position: relative;
+            left: 450px;
+            top: 150px;
+        ;
+        }
+    </style>
+    
+    <script type="text/javascript">
+
+    	function submitText(){
+    		var username = document.getElementsByName("username")[0].value;
+    		var password = document.getElementsByName("password")[0].value;
+    		if(username!="" && password!=""){
+    			return true;
+    		}else {
+    			alert("请输入用户名或密码！");
+    			return false;
+    		}
+    		
+    	}
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    <form action="\day10_contact_text\ValidataLogin" onsubmit="return submitText()" method="post" class="login">
+        <h3 align="center">个人通讯录登录页面</h3>
+        
+        用户名：<input type="text" placeholder="请输入用户名" name="username" onblur="unOnblurRemind()" onfocus="unOnfocusRemind()">
+        <!-- input的value为空时弹出提醒 -->
+        <div id="un_remind"></div><br>
+        
+        密&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="请输入密码" name="password" onblur="pwOnblurRemind()" onfocus="pwOnfocusRemind()"><br><br>
+        <!-- input的value为空时弹出提醒 -->
+        <div id="pw_remind"></div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="Register.html"><input type="button" value="注册"></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="登录">
+    </form>
+</body>
+</html>

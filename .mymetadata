@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="day10_contact_text"
+  id="myeclipse.1533390803845"
+  context-root="/day10_contact_text"
+  j2ee-spec="6.0"
+  archive="day10_contact_text.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

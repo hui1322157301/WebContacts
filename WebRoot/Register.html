@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .register{
+            background-color: aliceblue;
+            border: 2px solid;
+            text-align: center;
+            width: 500px;
+            height: 200px;
+            position: relative;
+            left: 450px;
+            top: 150px;
+        }
+    </style>
+
+	<script type="text/javascript">
+
+    	function submitText(){
+    		var username = document.getElementsByName("username")[0].value;
+    		var password = document.getElementsByName("password")[0].value;
+    		var username_reg = /^\w{3,10}$/;
+    		var password_reg = /^[a-zA-z0-9]{5,15}$/
+    		if(username_reg.test(username) && password_reg.test(password)){
+    			return true;
+    		}else {
+    			alert("用户名或密码不符合规定！");
+    			return false;
+    		}
+    		
+    	}
+
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <form action="\day10_contact_text\UserRegister" onsubmit="return submitText()" method="post" class="register">
+        <h3 align="center">个人通讯录注册页面</h3>
+        
+        用&nbsp;&nbsp;户&nbsp;&nbsp;名：<input type="text" placeholder="3-10位英文" name="username"><br><br>
+        
+        密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="5-20位字母或数字组合" name="password"><br><br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="Login.html"><input type="button" name="before" value="返回"></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="register" onclick="qrPw()" value="注册">
+    </form>
+
+</body>
+</html>

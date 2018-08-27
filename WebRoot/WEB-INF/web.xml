@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>ValidataLogin</servlet-name>
+    <servlet-class>contact_Servlet.ValidataLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserRegister</servlet-name>
+    <servlet-class>contact_Servlet.UserRegister</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowAll</servlet-name>
+    <servlet-class>contact_Servlet.ShowAll</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ValidataLogin</servlet-name>
+    <url-pattern>/ValidataLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserRegister</servlet-name>
+    <url-pattern>/UserRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAll</servlet-name>
+    <url-pattern>/ShowAll</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
